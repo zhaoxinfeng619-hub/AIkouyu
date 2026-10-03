@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "node AI口语搭子/app/scripts/sync-catalog.mjs && node AI口语搭子/app/scripts/sync-voice-orb.mjs",
+  "outputDirectory": "AI口语搭子/app/public",
+  "functions": { "api/*.mjs": { "maxDuration": 30 } }
+}

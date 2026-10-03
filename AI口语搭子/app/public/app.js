@@ -9,7 +9,7 @@ const ui = {
 };
 
 const state = {
-  health: null, token: '', scene: 'daily', view: 'home', mode: 'scene', category: 'all', favoritesOnly: false, active: false, ready: false,
+  health: null, token: '', rtc: null, scene: 'daily', view: 'home', mode: 'scene', category: 'all', favoritesOnly: false, active: false, ready: false,
   testing: false, muted: false, epoch: 0, socket: null, audio: null,
   request: null, timer: null, startedAt: 0, rows: new Map(),
   sources: new Set(), responses: new Map(), cancelled: new Set(),
@@ -253,11 +253,12 @@ function meterTick(now) {
     const inputEnabled = !state.muted && ((state.active && state.ready) || state.testingStage === 'listening');
     orb.setInputLevel(inputEnabled && now - state.lastInputAt < 180 ? state.inputLevel : 0);
     const audio = state.audio;
-    if (audio?.analyser && audio.context.state === 'running' && state.sources.size) {
+    if (audio?.analyser && audio.context.state === 'running' && (state.sources.size || state.rtc?.speaking)) {
       audio.analyser.getFloatTimeDomainData(audio.meterSamples);
       orb.setOutputLevel(rms(audio.meterSamples));
+      state.rtc?.updateOutputLevel(rms(audio.meterSamples));
     } else orb.setOutputLevel(0);
-    const level = state.sources.size ? rms(audio?.meterSamples || []) : inputEnabled && now - state.lastInputAt < 180 ? state.inputLevel : 0;
+    const level = (state.sources.size || state.rtc?.speaking) ? rms(audio?.meterSamples || []) : inputEnabled && now - state.lastInputAt < 180 ? state.inputLevel : 0;
     $('scene-presence').style.setProperty('--voice-level', level);
   }
   state.meterFrame = requestAnimationFrame(meterTick);
@@ -333,12 +334,19 @@ async function checkHealth() {
   try {
     state.health = await readJSON(await fetch('/api/health', { cache: 'no-store' }));
     const configured = Boolean(state.health.configured);
+    const webRTC = state.health.transport === 'webrtc';
+    document.querySelector('.setup-steps').hidden = webRTC;
+    document.querySelector('.token-copy-row').hidden = webRTC;
+    document.querySelector('.settings-intro').textContent = webRTC
+      ? '浏览器语音服务部署在 Vercel。填写自己的应用访问口令后开始聊天；百炼 API Key 保留在服务器。'
+      : 'API 密钥只放在后端。本地浏览器会自动领取应用访问口令，不需要把百炼密钥填进页面。';
+    $('access-token').placeholder = webRTC ? '填写部署时设置的应用访问口令' : '本机访问可留空';
     $('service-state').textContent = configured ? '千问连接已配置' : '千问待配置';
     $('service-state').classList.toggle('ready', configured);
     $('setup-banner').hidden = configured;
     $('health-details').textContent = configured
       ? `模型：${state.health.model || '由后端配置'}。配置已检测到，实际可用性将在开始通话时验证。`
-      : `尚未配置：${(state.health.missing || ['百炼 API Key']).join('、')}。保存 .env 后请重启服务。`;
+      : `尚未配置：${(state.health.missing || ['百炼 API Key']).join('、')}。${webRTC ? '请更新 Vercel 环境变量并重新部署。' : '保存 .env 后请重启服务。'}`;
     await refreshUsage();
   } catch (error) {
     state.health = null;
@@ -455,6 +463,7 @@ function disposeCapture(bundle) {
 }
 
 function send(message) {
+  if (state.rtc) { if (message.type === 'interrupt') state.rtc.interrupt(); if (message.type === 'session.stop') state.rtc.close(); return; }
   if (state.socket?.readyState === WebSocket.OPEN) state.socket.send(JSON.stringify(message));
 }
 
@@ -561,6 +570,7 @@ function showCost(value, id) {
 }
 
 function cleanupAudio() {
+  state.rtc?.close(); state.rtc = null;
   clearInterval(state.timer);
   state.timer = null;
   clearPlayback();
@@ -694,6 +704,35 @@ async function startSession() {
     if (state.epoch !== epoch || !state.active) { disposeCapture(capture); return; }
     state.audio = capture;
     const token = await getAccessToken(state.request.signal);
+    if (state.health.transport === 'webrtc') {
+      const { RealtimeRTC, deviceUsageLedger } = await import('./webrtc-client.js');
+      if (state.epoch !== epoch || !state.active) return;
+      resetTranscript(); updateDuration(0); showCost(0, 'session-cost');
+      $('device-note').textContent = '浏览器直连语音 · 费用与额度仅在本设备估算，建议戴耳机';
+      const readDeviceUsage = () => deviceUsageLedger(localStorage.getItem('speaking-rtc-usage-v1'));
+      const deviceTotals = ledger => {
+        const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+        return { day, dailyYuan: ledger[day] || 0, monthlyYuan: Object.entries(ledger).filter(([key]) => key.startsWith(day.slice(0, 7))).reduce((sum, [,value]) => sum + (Number(value) || 0), 0) };
+      };
+      const before = deviceTotals(readDeviceUsage());
+      if (before.dailyYuan >= 3 || before.monthlyYuan >= 50) throw new Error('本设备已达到费用阈值，请先核对百炼账单。');
+      const rtc = new RealtimeRTC({ capture, signal: state.request.signal, onEvent: message => { if (state.epoch === epoch) onServerMessage(message); }, onCost: (amount, sessionYuan) => {
+        if (state.epoch !== epoch) return;
+        let ledger, totalsBefore;
+        try {
+          ledger = readDeviceUsage(); totalsBefore = deviceTotals(ledger);
+          ledger[totalsBefore.day] = totalsBefore.dailyYuan + amount;
+          localStorage.setItem('speaking-rtc-usage-v1', JSON.stringify(ledger));
+        } catch { markIncompleteUsage(); stopSession(); showError('本设备费用记录无法保存，聊天已结束。请核对百炼账单。'); return; }
+        const totals = deviceTotals(ledger);
+        onServerMessage({ type: 'usage', sessionYuan, monthlyYuan: totals.monthlyYuan });
+        if (totals.dailyYuan >= 3 || totals.monthlyYuan >= 50) { stopSession(); showError('本设备达到费用阈值，聊天已结束。请以百炼账单为准。'); }
+      }});
+      state.rtc = rtc;
+      await rtc.connect({ token, options: { scene: state.scene, level: $('level').value, correction: $('correction').value } });
+      if (state.epoch !== epoch || !state.active) rtc.close();
+      return;
+    }
     const session = await readJSON(await fetch('/api/sessions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
@@ -750,6 +789,7 @@ async function startSession() {
 }
 
 function stopSession() {
+  if (state.rtc?.hasPendingUsage) markIncompleteUsage();
   state.request?.abort();
   send({ type: 'session.stop' });
   const socket = state.socket;
@@ -826,9 +866,10 @@ ui.start.addEventListener('click', startSession);
 ui.test.addEventListener('click', testMicrophone);
 ui.mute.addEventListener('click', () => {
   state.muted = !state.muted;
+  state.rtc?.setMuted(state.muted);
   updateControls();
   if (state.muted) orb.setInputLevel(0);
-  setStatus(state.sources.size ? 'speaking' : state.status);
+  setStatus((state.sources.size || state.rtc?.speaking) ? 'speaking' : state.status);
 });
 ui.interrupt.addEventListener('click', () => {
   clearPlayback(state.currentResponse);

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "status": "COMPLETED",
+  "project_dir": "/Users/gaowenjie/Desktop/AI学英语小程序/AI口语搭子/showreel",
+  "composition": "ProductShowreel",
+  "requested_outputs": [
+    "action-sample.mp4",
+    "structure-sample.mp4",
+    "motion-audit.mp4",
+    "silent-preview.mp4",
+    "video.mp4"
+  ],
+  "probe_exit_code": 1,
+  "probe_error_summary": "Your macOS version is older than macOS 15 (Sequoia). Some features such as rendering may not work.\nCould not find a tsconfig.json file in your project. Did you delete it? Create a tsconfig.json in the root of your project. Copy the default file from https://github.com/remotion-dev/template-helloworld/blob/main/tsconfig.json. The root directory is: /Users/gaowenjie/Desktop/AI学英语小程序/AI口语搭子/showreel\n",
+  "instruction": "Do not explore alternate renderers inside the creative Agent. Render in the verified outer Harness environment.",
+  "recovery": "Added project tsconfig; rendered in verified Remotion runtime with installed Chrome. Final 1920x1080 H.264 plus original AAC score verified."
+}

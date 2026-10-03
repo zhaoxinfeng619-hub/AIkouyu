@@ -1,0 +1,1306 @@
+{
+  "fps": 30,
+  "duration_in_frames": 900,
+  "actions": [
+    {
+      "id": "M01",
+      "layer": "camera",
+      "object_id": "coffee-card",
+      "start_frame": 0,
+      "end_frame": 95,
+      "visible_change": "咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出",
+      "product_information_change": "选择咖啡店点单",
+      "events": [
+        {
+          "frame": 0,
+          "visible_change": "中心848,324；宽228，高342；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 8,
+          "visible_change": "中心845,325；宽236，高354；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 16,
+          "visible_change": "中心841,329；宽248，高373；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 24,
+          "visible_change": "中心840,336；宽252，高378；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 32,
+          "visible_change": "中心830,341；宽259，高388；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 40,
+          "visible_change": "中心783,345；宽290，高435；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 48,
+          "visible_change": "中心742,347；宽317，高476；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 56,
+          "visible_change": "中心725,348；宽329，高493；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 64,
+          "visible_change": "中心720,348；宽332，高498；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 72,
+          "visible_change": "中心689,353；宽365，高547；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 80,
+          "visible_change": "中心649,359；宽407，高611；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 88,
+          "visible_change": "中心640,360；宽416，高624；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        },
+        {
+          "frame": 95,
+          "visible_change": "中心571,358；宽404，高605；咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "coffee-card",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "coffeeMotion"
+        ]
+      }
+    },
+    {
+      "id": "M02",
+      "layer": "product_carrier",
+      "object_id": "coffee-card",
+      "start_frame": 88,
+      "end_frame": 207,
+      "visible_change": "同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立",
+      "product_information_change": "认识Alex，选择初学者和温和提醒",
+      "events": [
+        {
+          "frame": 88,
+          "visible_change": "中心640,360；宽416，高624；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 96,
+          "visible_change": "中心548,358；宽399，高599；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 104,
+          "visible_change": "中心379,354；宽369，高554；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 112,
+          "visible_change": "中心325,352；宽359，高540；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 120,
+          "visible_change": "中心317,352；宽360，高540；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 128,
+          "visible_change": "中心311,353；宽370，高552；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 136,
+          "visible_change": "中心302,355；宽385，高569；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 144,
+          "visible_change": "中心298,358；宽392，高577；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 152,
+          "visible_change": "中心296,360；宽395，高580；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 160,
+          "visible_change": "中心297,362；宽394，高578；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 168,
+          "visible_change": "中心305,363；宽385，高567；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 176,
+          "visible_change": "中心315,364；宽375，高553；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 184,
+          "visible_change": "中心320,365；宽370，高547；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 192,
+          "visible_change": "中心322,365；宽368，高544；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 200,
+          "visible_change": "中心348,365；宽443，高558；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        },
+        {
+          "frame": 207,
+          "visible_change": "中心509,362；宽905，高648；同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "coffee-card",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "coffeeMotion"
+        ]
+      }
+    },
+    {
+      "id": "M03",
+      "layer": "interface_response",
+      "object_id": "dialogue-focus",
+      "start_frame": 200,
+      "end_frame": 323,
+      "visible_change": "开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新",
+      "product_information_change": "用户说出想点一杯拿铁",
+      "events": [
+        {
+          "frame": 200,
+          "visible_change": "中心736,523；宽961，高247；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 208,
+          "visible_change": "中心647,460；宽1055，高291；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 216,
+          "visible_change": "中心639,455；宽1060，高294；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 224,
+          "visible_change": "中心635,452；宽1060，高294；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 232,
+          "visible_change": "中心629,449；宽1060，高294；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 240,
+          "visible_change": "中心627,447；宽1060，高294；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 248,
+          "visible_change": "中心626,447；宽1060，高294；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 256,
+          "visible_change": "中心623,444；宽1055，高292；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 264,
+          "visible_change": "中心611,434；宽1036，高286；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 272,
+          "visible_change": "中心598,417；宽1020，高281；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 280,
+          "visible_change": "中心589,404；宽1010，高277；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 288,
+          "visible_change": "中心584,397；宽1005，高276；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 296,
+          "visible_change": "中心581,393；宽1001，高274；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 304,
+          "visible_change": "中心580,391；宽1000，高274；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 312,
+          "visible_change": "中心592,393；宽1016，高289；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 320,
+          "visible_change": "中心627,381；宽1046，高316；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        },
+        {
+          "frame": 323,
+          "visible_change": "中心631,379；宽1049，高319；开始按钮边界扩成语音输入字幕；点单句逐词建立，输入波形随语音能量更新"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "dialogue-focus",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "dialogueMotion"
+        ]
+      }
+    },
+    {
+      "id": "M04",
+      "layer": "interface_response",
+      "object_id": "dialogue-focus",
+      "start_frame": 316,
+      "end_frame": 419,
+      "visible_change": "同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现",
+      "product_information_change": "Alex理解点单并追问冷热",
+      "events": [
+        {
+          "frame": 316,
+          "visible_change": "中心615,387；宽1036，高307；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 324,
+          "visible_change": "中心632,379；宽1049，高319；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 332,
+          "visible_change": "中心632,379；宽1049，高319；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 340,
+          "visible_change": "中心626,383；宽1046，高316；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 348,
+          "visible_change": "中心617,390；宽1041，高312；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 356,
+          "visible_change": "中心611,394；宽1037，高309；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 364,
+          "visible_change": "中心608,396；宽1034，高307；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 372,
+          "visible_change": "中心606,397；宽1032，高306；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 380,
+          "visible_change": "中心607,399；宽1031，高305；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 388,
+          "visible_change": "中心620,419；宽1031，高304；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 396,
+          "visible_change": "中心627,431；宽1030，高304；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 404,
+          "visible_change": "中心629,434；宽1030，高304；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 412,
+          "visible_change": "中心637,432；宽1064，高313；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        },
+        {
+          "frame": 419,
+          "visible_change": "中心636,426；宽1083，高318；同一字幕载体换为Alex输出，热饮或冰饮问题逐词出现"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "dialogue-focus",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "dialogueMotion"
+        ]
+      }
+    },
+    {
+      "id": "M05",
+      "layer": "interface_response",
+      "object_id": "dialogue-focus",
+      "start_frame": 412,
+      "end_frame": 519,
+      "visible_change": "旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现",
+      "product_information_change": "用户自然插话改成冰饮，角色停止旧回复并倾听",
+      "events": [
+        {
+          "frame": 412,
+          "visible_change": "中心637,432；宽1064，高313；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 420,
+          "visible_change": "中心635,426；宽1085，高319；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 428,
+          "visible_change": "中心635,424；宽1090，高320；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 436,
+          "visible_change": "中心635,422；宽1086，高318；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 444,
+          "visible_change": "中心634,413；宽1075，高312；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 452,
+          "visible_change": "中心635,402；宽1063，高306；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 460,
+          "visible_change": "中心635,395；宽1054，高301；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 468,
+          "visible_change": "中心635,391；宽1048，高298；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 476,
+          "visible_change": "中心634,389；宽1045，高296；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 484,
+          "visible_change": "中心633,389；宽1042，高295；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 492,
+          "visible_change": "中心638,407；宽1041，高294；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 500,
+          "visible_change": "中心640,416；宽1040，高294；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 508,
+          "visible_change": "中心641,420；宽1014，高292；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 516,
+          "visible_change": "中心685,448；宽901，高282；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        },
+        {
+          "frame": 519,
+          "visible_change": "中心718,462；宽875，高279；旧输出停止，同一中央字幕切成蓝色输入，Actually iced please逐词出现"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "dialogue-focus",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "dialogueMotion"
+        ]
+      }
+    },
+    {
+      "id": "M06",
+      "layer": "product_carrier",
+      "object_id": "dialogue-focus",
+      "start_frame": 512,
+      "end_frame": 647,
+      "visible_change": "新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留",
+      "product_information_change": "切换视觉不重连，Alex继续问杯型",
+      "events": [
+        {
+          "frame": 512,
+          "visible_change": "中心646,429；宽952，高286；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 520,
+          "visible_change": "中心727,465；宽868，高279；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 528,
+          "visible_change": "中心767,482；宽834，高276；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 536,
+          "visible_change": "中心780,487；宽824，高275；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 544,
+          "visible_change": "中心782,490；宽831，高275；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 552,
+          "visible_change": "中心783,499；宽843，高275；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 560,
+          "visible_change": "中心782,507；宽848，高275；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 568,
+          "visible_change": "中心782,510；宽851，高275；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 576,
+          "visible_change": "中心782,511；宽852，高275；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 584,
+          "visible_change": "中心786,512；宽856，高273；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 592,
+          "visible_change": "中心797,516；宽866，高267；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 600,
+          "visible_change": "中心810,523；宽873，高264；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 608,
+          "visible_change": "中心818,528；宽877，高262；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 616,
+          "visible_change": "中心822,531；宽879，高261；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 624,
+          "visible_change": "中心824,532；宽880，高260；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 632,
+          "visible_change": "中心818,530；宽880，高251；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 640,
+          "visible_change": "中心752,519；宽880，高172；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        },
+        {
+          "frame": 647,
+          "visible_change": "中心670,533；宽880，高130；新回答建立，模式选中底板移到语音球；Alex场景图移开，球体与同一字幕保留"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "dialogue-focus",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "dialogueMotion"
+        ]
+      }
+    },
+    {
+      "id": "M07",
+      "layer": "product_carrier",
+      "object_id": "dialogue-focus",
+      "start_frame": 640,
+      "end_frame": 767,
+      "visible_change": "同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制",
+      "product_information_change": "复制当前对话便于回看",
+      "events": [
+        {
+          "frame": 640,
+          "visible_change": "中心752,519；宽880，高172；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 648,
+          "visible_change": "中心662,534；宽880，高127；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 656,
+          "visible_change": "中心626,541；宽880，高108；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 664,
+          "visible_change": "中心616,543；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 672,
+          "visible_change": "中心618,542；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 680,
+          "visible_change": "中心625,542；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 688,
+          "visible_change": "中心633,541；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 696,
+          "visible_change": "中心636,541；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 704,
+          "visible_change": "中心638,541；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 712,
+          "visible_change": "中心638,540；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 720,
+          "visible_change": "中心641,539；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 728,
+          "visible_change": "中心649,534；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 736,
+          "visible_change": "中心658,529；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 744,
+          "visible_change": "中心663,525；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 752,
+          "visible_change": "中心666,524；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 760,
+          "visible_change": "中心668,523；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        },
+        {
+          "frame": 767,
+          "visible_change": "中心668,523；宽880，高103；同一Alex字幕收进记录末行，其余三句按说话顺序建立；复制记录变为已复制"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "dialogue-focus",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "dialogueMotion"
+        ]
+      }
+    },
+    {
+      "id": "M08",
+      "layer": "camera",
+      "object_id": "coffee-card",
+      "start_frame": 760,
+      "end_frame": 899,
+      "visible_change": "Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立",
+      "product_information_change": "把英语聊进生活，继续练习其他生活场景",
+      "events": [
+        {
+          "frame": 760,
+          "visible_change": "中心1090,315；宽316，高429；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 768,
+          "visible_change": "中心1047,310；宽276，高407；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 776,
+          "visible_change": "中心1038,311；宽274，高406；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 784,
+          "visible_change": "中心1013,314；宽274，高406；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 792,
+          "visible_change": "中心1002,320；宽274，高406；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 800,
+          "visible_change": "中心1000,328；宽274，高406；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 808,
+          "visible_change": "中心999,334；宽278，高413；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 816,
+          "visible_change": "中心996,338；宽288，高427；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 824,
+          "visible_change": "中心993,340；宽295，高438；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 832,
+          "visible_change": "中心992,341；宽299，高443；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 840,
+          "visible_change": "中心992,342；宽300，高445；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 848,
+          "visible_change": "中心990,343；宽299，高444；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 856,
+          "visible_change": "中心982,345；宽294，高437；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 864,
+          "visible_change": "中心967,351；宽285，高423；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 872,
+          "visible_change": "中心953,355；宽278，高411；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 880,
+          "visible_change": "中心946,358；宽273，高405；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 888,
+          "visible_change": "中心942,359；宽271，高402；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 896,
+          "visible_change": "中心940,360；宽270，高400；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        },
+        {
+          "frame": 899,
+          "visible_change": "中心940,360；宽270，高400；Alex由边缘场景图回到六人集合，首卡身份连续；品牌与下一段对话入口随角色阵列建立"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "coffee-card",
+        "animated_properties": [
+          "left",
+          "top",
+          "width",
+          "height"
+        ],
+        "expression_markers": [
+          "coffeeMotion"
+        ]
+      }
+    },
+    {
+      "id": "I01",
+      "layer": "interface_response",
+      "object_id": "intro",
+      "start_frame": 0,
+      "end_frame": 88,
+      "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点",
+      "product_information_change": "可识别产品是口语陪练",
+      "events": [
+        {
+          "frame": 0,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 8,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 16,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 24,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 32,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 40,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 48,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 56,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 64,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 72,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 80,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        },
+        {
+          "frame": 88,
+          "visible_change": "品牌、核心任务与分类一起建立并移出，让选中的角色接管焦点；对象在该帧由introMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "intro",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "introMotion"
+        ]
+      }
+    },
+    {
+      "id": "I02",
+      "layer": "interface_response",
+      "object_id": "selection",
+      "start_frame": 46,
+      "end_frame": 94,
+      "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情",
+      "product_information_change": "咖啡场景被选中",
+      "events": [
+        {
+          "frame": 46,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        },
+        {
+          "frame": 54,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        },
+        {
+          "frame": 62,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        },
+        {
+          "frame": 70,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        },
+        {
+          "frame": 78,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        },
+        {
+          "frame": 86,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        },
+        {
+          "frame": 94,
+          "visible_change": "蓝色选择边界包裹咖啡卡，并沿同一中心收进详情；对象在该帧由ringMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "selection",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "ringMotion"
+        ]
+      }
+    },
+    {
+      "id": "I03",
+      "layer": "interface_response",
+      "object_id": "profile",
+      "start_frame": 100,
+      "end_frame": 207,
+      "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立",
+      "product_information_change": "角色身份、练习偏好可读",
+      "events": [
+        {
+          "frame": 100,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 108,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 116,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 124,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 132,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 140,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 148,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 156,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 164,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 172,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 180,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 188,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 196,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 204,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        },
+        {
+          "frame": 207,
+          "visible_change": "职业、性格、简介、初学者和温和提醒按4–9帧错峰建立；对象在该帧由profileMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "profile",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "profileMotion"
+        ]
+      }
+    },
+    {
+      "id": "I04",
+      "layer": "interface_response",
+      "object_id": "orb",
+      "start_frame": 543,
+      "end_frame": 647,
+      "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话",
+      "product_information_change": "语音球仅改变视觉表现",
+      "events": [
+        {
+          "frame": 543,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 551,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 559,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 567,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 575,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 583,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 591,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 599,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 607,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 615,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 623,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 631,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 639,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        },
+        {
+          "frame": 647,
+          "visible_change": "语音球从原场景旁进入，尺寸与语音能量响应同一对话；对象在该帧由orbitMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "orb",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "orbitMotion"
+        ]
+      }
+    },
+    {
+      "id": "I05",
+      "layer": "interface_response",
+      "object_id": "copy",
+      "start_frame": 706,
+      "end_frame": 736,
+      "visible_change": "复制记录按钮压下，文字在F722改为已复制，底色变蓝灰",
+      "product_information_change": "当前字幕已复制",
+      "events": [
+        {
+          "frame": 706,
+          "visible_change": "复制记录按钮压下，文字在F722改为已复制，底色变蓝灰；对象在该帧由recordCopyMotion驱动"
+        },
+        {
+          "frame": 714,
+          "visible_change": "复制记录按钮压下，文字在F722改为已复制，底色变蓝灰；对象在该帧由recordCopyMotion驱动"
+        },
+        {
+          "frame": 722,
+          "visible_change": "复制记录按钮压下，文字在F722改为已复制，底色变蓝灰；对象在该帧由recordCopyMotion驱动"
+        },
+        {
+          "frame": 730,
+          "visible_change": "复制记录按钮压下，文字在F722改为已复制，底色变蓝灰；对象在该帧由recordCopyMotion驱动"
+        },
+        {
+          "frame": 736,
+          "visible_change": "复制记录按钮压下，文字在F722改为已复制，底色变蓝灰；对象在该帧由recordCopyMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "copy",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "recordCopyMotion"
+        ]
+      }
+    },
+    {
+      "id": "I07",
+      "layer": "interface_response",
+      "object_id": "dialogue-focus",
+      "start_frame": 577,
+      "end_frame": 629,
+      "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向",
+      "product_information_change": "将当前回答保留到记录",
+      "events": [
+        {
+          "frame": 577,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 585,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 593,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 601,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 609,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 617,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 625,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        },
+        {
+          "frame": 629,
+          "visible_change": "读完冷热问题后，字幕与语音球错峰进入记录方向；对象在该帧由dialogueMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "dialogue-focus",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "dialogueMotion"
+        ]
+      }
+    },
+    {
+      "id": "I08",
+      "layer": "interface_response",
+      "object_id": "coffee-card",
+      "start_frame": 843,
+      "end_frame": 899,
+      "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合",
+      "product_information_change": "下一段生活对话仍可开始",
+      "events": [
+        {
+          "frame": 843,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 851,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 859,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 867,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 875,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 883,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 891,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        },
+        {
+          "frame": 899,
+          "visible_change": "读完品牌结果后，同一Alex场景卡与其余角色继续归入可选集合；对象在该帧由coffeeMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "coffee-card",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "coffeeMotion"
+        ]
+      }
+    },
+    {
+      "id": "I09",
+      "layer": "interface_response",
+      "object_id": "final-cta",
+      "start_frame": 891,
+      "end_frame": 899,
+      "visible_change": "开始聊天控件恢复产品蓝色，结尾仍保持下一次操作入口",
+      "product_information_change": "准备继续开口",
+      "events": [
+        {
+          "frame": 891,
+          "visible_change": "开始聊天控件恢复产品蓝色，结尾仍保持下一次操作入口；对象在该帧由finalCtaMotion驱动"
+        },
+        {
+          "frame": 899,
+          "visible_change": "开始聊天控件恢复产品蓝色，结尾仍保持下一次操作入口；对象在该帧由finalCtaMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "final-cta",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "finalCtaMotion"
+        ]
+      }
+    },
+    {
+      "id": "I06",
+      "layer": "interface_response",
+      "object_id": "final-title",
+      "start_frame": 790,
+      "end_frame": 899,
+      "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开",
+      "product_information_change": "从一句Hi开始练习",
+      "events": [
+        {
+          "frame": 790,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 798,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 806,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 814,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 822,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 830,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 838,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 846,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 854,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 862,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 870,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 878,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 886,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 894,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        },
+        {
+          "frame": 899,
+          "visible_change": "品牌随角色集合建立，价值与下一段对话入口依次揭开；对象在该帧由finalTitleMotion驱动"
+        }
+      ],
+      "source_binding": {
+        "source_file": "src/ProductShowreel.tsx",
+        "object_marker": "final-title",
+        "animated_properties": [
+          "transform",
+          "opacity",
+          "content"
+        ],
+        "expression_markers": [
+          "finalTitleMotion"
+        ]
+      }
+    }
+  ],
+  "result_holds": [
+    {
+      "id": "R01",
+      "start_frame": 570,
+      "end_frame": 587,
+      "product_result": "Alex回应冰饮并追问杯型，语音球模式保留同一角色与字幕",
+      "next_action_id": "I07"
+    },
+    {
+      "id": "R02",
+      "start_frame": 699,
+      "end_frame": 712,
+      "product_result": "当前对话记录可读，复制操作在读数结束前启动",
+      "next_action_id": "I05"
+    },
+    {
+      "id": "R03",
+      "start_frame": 841,
+      "end_frame": 849,
+      "product_result": "把英语聊进生活，六种场景保持可选",
+      "next_action_id": "I08"
+    },
+    {
+      "id": "R04",
+      "start_frame": 891,
+      "end_frame": 899,
+      "product_result": "品牌与开始聊天入口完整保留",
+      "next_action_id": "I09"
+    }
+  ],
+  "continuity_chain": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08"
+  ],
+  "note": "不把背景移动算作产品动画；逐词字幕、角色标签、记录行与波形是对应真实状态的演示。工程覆盖通过不等于正常速度质量通过。"
+}

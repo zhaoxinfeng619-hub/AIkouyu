@@ -1,0 +1,21 @@
+{
+  "name": "ai-speaking-buddy-showreel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "probe": "remotion compositions src/index.tsx --log error",
+    "render": "node scripts/render-final.mjs",
+    "stills": "node scripts/evidence.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/renderer": "4.0.532",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "remotion": "4.0.532"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
+  }
+}

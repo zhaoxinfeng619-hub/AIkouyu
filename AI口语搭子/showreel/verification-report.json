@@ -1,0 +1,53 @@
+{
+  "deliverable": "video.mp4",
+  "format": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 900,
+    "seconds": 30,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioSampleRate": 48000,
+    "audioChannels": 2
+  },
+  "checks": {
+    "product_motion": "PASS — 17 registered actions with result holds",
+    "source_bindings": "PASS — 17 objects/expressions",
+    "handoffs": "PASS — 7 transitions with five actual evidence frames",
+    "motion_audit": "PASS — original freezedetect validator at -42dB; no undeclared near-static interval longer than eight frames",
+    "normal_speed_playback": "PASS — browser completed 30 seconds at 1x, unmuted, 1920x1080, no media error",
+    "keyframes": "six primary frames + end frame + mode/record proof + seven five-frame handoffs"
+  },
+  "audio": {
+    "input_i": "-16.12",
+    "input_tp": "-1.48",
+    "input_lra": "2.60",
+    "input_thresh": "-26.18",
+    "output_i": "-16.07",
+    "output_tp": "-1.28",
+    "output_lra": "2.20",
+    "output_thresh": "-26.12",
+    "normalization_type": "dynamic",
+    "target_offset": "0.07"
+  },
+  "product_tests": {
+    "unit_and_protocol": 52,
+    "passed": 52,
+    "browser_checks": [
+      "browser-check.mjs",
+      "orb-check.mjs",
+      "scenes-browser-check.mjs",
+      "rtc-browser-check.mjs"
+    ],
+    "cloud_calls": false
+  },
+  "reference_exception": "User approved existing package cases instead of absent 72 contact sheets; no 1800-frame reference analysis claimed.",
+  "live_deployment": "Vercel WebRTC source prepared and locally checked; not deployed or verified with real cloud audio.",
+  "hashes": {
+    "src/ProductShowreel.tsx": "190ccfe1932b6f9dc090c72d4eb27609d209a52a8f04b809596f5f933bf6b2e6",
+    "src/motion.ts": "c8a3cfec5fe0a93474cd8959789daa14daa82fa9132629a01595dd40c7e7a9d4",
+    "video.mp4": "8eea92c9c95172a3a600528a6ebfcf1183893453bb04c5c278086651a0da7426",
+    "motion-audit.mp4": "7a9d0a894efd4daaf49a02982e2297e7e76287c195a37bbdeea85416e94e67a2"
+  }
+}

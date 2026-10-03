@@ -1,0 +1,15 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url);
+const ffmpeg=require('@ffmpeg-installer/ffmpeg').path;
+const run=args=>{const r=spawnSync(ffmpeg,args,{encoding:'utf8',maxBuffer:16*1024*1024});if(r.status!==0)throw Error(r.stderr);return r.stderr};
+const measure=run(['-hide_banner','-i','original-score.wav','-af','loudnorm=I=-16:TP=-1.5:LRA=8:print_format=json','-f','null','-']);
+const stats=JSON.parse(measure.slice(measure.lastIndexOf('{')));
+const filter=`loudnorm=I=-16:TP=-1.5:LRA=8:measured_I=${stats.input_i}:measured_TP=${stats.input_tp}:measured_LRA=${stats.input_lra}:measured_thresh=${stats.input_thresh}:offset=${stats.target_offset}:linear=true:print_format=json`;
+run(['-y','-hide_banner','-i','silent-preview.mp4','-i','original-score.wav','-map','0:v:0','-map','1:a:0','-c:v','copy','-af',filter,'-c:a','aac','-b:a','192k','-ar','48000','-t','30','-movflags','+faststart','video.mp4']);
+const final=run(['-hide_banner','-i','video.mp4','-af','loudnorm=I=-16:TP=-1:LRA=8:print_format=json','-vn','-f','null','-']);
+const result=JSON.parse(final.slice(final.lastIndexOf('{')));
+fs.writeFileSync('audio-normalization.json',JSON.stringify({source:stats,final:result,sourceType:'original synthesized score',durationSeconds:30},null,2));
+console.log(`Final audio: ${result.input_i} LUFS / ${result.input_tp} dBTP; ${path.resolve('video.mp4')}`);

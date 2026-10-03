@@ -1,0 +1,11 @@
+.local-motion.mjs
+.local-bundle.json
+.render-tmp/
+probe.stderr.log
+original-score.wav
+normalized-score.wav
+*.mp4
+evidence/
+keyframe-contact-sheet.png
+audio-normalization.json
+showreel-delivery.zip

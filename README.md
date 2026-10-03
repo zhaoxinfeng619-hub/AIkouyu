@@ -18,6 +18,10 @@ npm start
 
 详见 [开发与配置指南](AI口语搭子/app/README.md)。测试：在 app 目录运行 `npm test`。
 
+浏览器版现提供 Vercel WebRTC 接入：Vercel 只转发短时 SDP 握手，音频直接连接百炼。按[部署说明](AI口语搭子/app/docs/Vercel部署.md)设置仓库根目录和环境变量后重新部署。当前代码与本地模拟测试已完成，尚未验证真实云端通话；微信小程序继续使用 Node.js WebSocket 后端。
+
+30 秒产品展示片及可编辑 Remotion 工程在 [showreel/](AI口语搭子/showreel/README.md)。片中对白为脚本演示。
+
 ## 项目内容
 
 - `AI口语搭子/app/`：后端、微信客户端、浏览器调试页、配置及自动化测试。
