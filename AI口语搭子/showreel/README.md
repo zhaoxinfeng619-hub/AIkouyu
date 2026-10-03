@@ -25,6 +25,8 @@ node scripts/finalize-audio.mjs
 
 `MotionAudit` composition 关闭背景色场，用于检查产品动作。`npm run stills` 导出六个主关键帧、结束帧与七组五帧交接证据；`product-motion-map.json` 登记 17 项动作，`handoff-map.json` 登记交接对象和状态。验证记录见 `verification-report.json`。这些工程检查不等于真实 AI 连接或微信真机音频验收。
 
+修改坐标后运行 `node scripts/make-plans.mjs` 同步动作表和导演方案。运行 `python3 scripts/make-contact-sheets.py` 合成关键帧与交接联系表（需要 Pillow）。
+
 ## 参考例外与署名
 
 按用户确认，使用 skill 包已有案例图继续制作。包内没有指定的 72 张参考联系表，因此没有声称分析 1800 张参考帧，也没有宣称逐条达到原始参考视频的完整硬门槛。阅读收据与文件哈希保存在 `skill-read-receipt.json`。

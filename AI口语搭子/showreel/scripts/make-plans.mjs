@@ -1,5 +1,7 @@
 import fs from 'node:fs';
-import {coffeeGeometry,dialogueGeometry} from '../.local-motion.mjs';
+import {build} from 'esbuild';
+await build({entryPoints:['src/motion.ts'],bundle:true,platform:'node',format:'esm',packages:'external',outfile:'.local-motion.mjs'});
+const {coffeeGeometry,dialogueGeometry}=await import('../.local-motion.mjs');
 const primary=[
  ['M01','camera','coffee-card',0,95,'咖啡场景卡从六人列表中移入中心，保留Alex图像，其他场景沿两个深度层退出','选择咖啡店点单','coffeeMotion',coffeeGeometry],
  ['M02','product_carrier','coffee-card',88,207,'同一角色卡改成详情肖像；头像裁切、姓名、职业与耐心标签错峰建立','认识Alex，选择初学者和温和提醒','coffeeMotion',coffeeGeometry],
