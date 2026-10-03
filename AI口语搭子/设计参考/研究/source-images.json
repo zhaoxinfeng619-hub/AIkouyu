@@ -1,0 +1,1002 @@
+[
+  {
+    "url": "https://elsaspeak.com/en",
+    "images": [
+      {
+        "alt": "Elsa Speak Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2Felsa-logo-white.BoF6KvtL.svg&w=120&h=40&f=svg",
+        "w": 300,
+        "h": 102
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/sparkles_26b6326175.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Vector_5fa713461e.svg",
+        "w": 17,
+        "h": 19
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/clock_afe1f78bbe.svg",
+        "w": 18,
+        "h": 22
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/shopping_bag_6dc6d6ae4f.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Vector_af1b9954fb.svg",
+        "w": 17,
+        "h": 17
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/canva_fire_flame_emoji_MAG_7_Ff_Sn_Z_Wg_a293283420.webp",
+        "w": 409,
+        "h": 550
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/building_c1b2e3a909.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/messages_square_01f59264c7.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/briefcase_06cb49ad18.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/newspaper_172e13582b.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/file_text_c3e4fbb822.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/file_text_c3e4fbb822.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/code_2_503839e54e.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/1_9ed6d3a5f1.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/file_spreadsheet_fece4756d1.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "English",
+        "src": "https://elsaspeak.com/_astro/English.DYVYGdjZ.svg",
+        "w": 24,
+        "h": 24
+      },
+      {
+        "alt": "Menu Icon",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FMenuIcon.DLg0N-n2.svg&w=32&h=32&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/sparkles_26b6326175.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Vector_5fa713461e.svg",
+        "w": 17,
+        "h": 19
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/clock_afe1f78bbe.svg",
+        "w": 18,
+        "h": 22
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/shopping_bag_6dc6d6ae4f.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Vector_af1b9954fb.svg",
+        "w": 17,
+        "h": 17
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/canva_fire_flame_emoji_MAG_7_Ff_Sn_Z_Wg_a293283420.webp",
+        "w": 409,
+        "h": 550
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/building_c1b2e3a909.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/messages_square_01f59264c7.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/briefcase_06cb49ad18.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/newspaper_172e13582b.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/file_text_c3e4fbb822.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/file_text_c3e4fbb822.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/code_2_503839e54e.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/1_9ed6d3a5f1.svg",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/file_spreadsheet_fece4756d1.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "English",
+        "src": "https://elsaspeak.com/_astro/English.DYVYGdjZ.svg",
+        "w": 24,
+        "h": 24
+      },
+      {
+        "alt": "App Store",
+        "src": "https://elsaspeak.com/_astro/AppStore.DH1m4Q6V.png",
+        "w": 36,
+        "h": 36
+      },
+      {
+        "alt": "Google Play",
+        "src": "https://elsaspeak.com/_astro/ChPlay.BQmnNk4l.png",
+        "w": 36,
+        "h": 36
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/World_Economic_Forum_logo_1_6f4bf10e84.png",
+        "w": 330,
+        "h": 176
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Camada_1_39c75a9cd7.png",
+        "w": 330,
+        "h": 176
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Camada_1_1_870422c7d5.png",
+        "w": 330,
+        "h": 176
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/1_Personalized_Learning_Experience_1f28d2cfd4.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/5_Bilingual_9f28a11921.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/4_AI_role_play_43eaa10146.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/2_Instant_Feedback_14a6a4e6ee.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/3_Progress_Tracking_f7022f734a.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/6_dashboard_e94826746b.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Phone Frame",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2Fphone-frame.C75TdRu7.png&w=297&h=612&f=webp",
+        "w": 297,
+        "h": 612
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/online_meeting_d54c9bacd7.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/3_1f3540f8ef.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/messages_square_7da717c957.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/luggage_512919c9c4.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/presentation_acee144881.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/1_8ecc1a450d.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/2_1997dae126.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/ELSA_Business_Logomark_Primary_9a24d395b9.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/ELSA_Schools_Logomark_Primary_0f584ceabf.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Master Workplace Communication",
+        "src": "https://cms-asset.elsanow.io/uploads/briefcase_177d085301.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Communicative Focus",
+        "src": "https://cms-asset.elsanow.io/uploads/icon_communicative_focus_8f927e4dbb.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Real-World, Task-Based Activities",
+        "src": "https://cms-asset.elsanow.io/uploads/icon_task_based_activities_25d6a329c5.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Fluency & Intelligibility",
+        "src": "https://cms-asset.elsanow.io/uploads/icon_fluency_intelligibility_0253eb2f1b.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "AI-Powered, Personalized Lessons",
+        "src": "https://cms-asset.elsanow.io/uploads/icon_ai_personalized_path_8b7231e54f.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/KEVIN_Workplace_1917ba70a3.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/PROFESSOR_Interview_8d9899f4c3.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/RIVA_Dating_0318fa07e1.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/CAMILA_Meetings_faac0f6fc2.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/LILY_Presentations_71648bbf70.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/1_46913b81f8.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector1",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector1.BOGBi18x.svg&w=405&h=492&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector2",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector2.CZM9zIiA.svg&w=405&h=406&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector3",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector3.DxXwL5Wi.svg&w=405&h=368&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "arrow right",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FSeeHow.CQzqIB8k.svg&w=13&h=14&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Video_ac5449a0cf.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector1",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector1.BOGBi18x.svg&w=405&h=492&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector2",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector2.CZM9zIiA.svg&w=405&h=406&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector3",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector3.DxXwL5Wi.svg&w=405&h=368&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "arrow right",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FSeeHow.CQzqIB8k.svg&w=13&h=14&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/3_2a1b5d92ff.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector1",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector1.BOGBi18x.svg&w=405&h=492&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector2",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector2.CZM9zIiA.svg&w=405&h=406&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Vector3",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FVector3.DxXwL5Wi.svg&w=405&h=368&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "arrow right",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FSeeHow.CQzqIB8k.svg&w=13&h=14&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Nestle_PNG_Free_File_Download_29e8002b7c.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Nusa Dua Beach Hotel & Spa",
+        "src": "https://cms-asset.elsanow.io/uploads/Screenshot_2026_05_21_at_8_56_22_AM_fddeeb814a.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "PLN logo",
+        "src": "https://cms-asset.elsanow.io/uploads/Logo_PLN_svg_2_91c8bd7b5f.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Nash Tech",
+        "src": "https://cms-asset.elsanow.io/uploads/unnamed_1_7f6bb30967.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Logo_Linguatec_sin_fondo_fb3a8ff930.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "YKKAP",
+        "src": "https://cms-asset.elsanow.io/uploads/ykk_ap_logo_530x600_a36cf38f90.webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/telus_digital_new_logo_82a93e00eb.webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "NTT Data",
+        "src": "https://cms-asset.elsanow.io/uploads/Globa_Logo_Isolation_Color_transparent_dd7e9e2342.gif",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Pertamina_logo_white_Di3_YB_2_Jb_03e19b9cee.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Permata Bank",
+        "src": "https://cms-asset.elsanow.io/uploads/Permata_Bank_WHITE_Logo_a0ed5d72c8.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Hamburger University logo",
+        "src": "https://cms-asset.elsanow.io/uploads/hamburger_university_logo_2cd9557543.jpeg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Nestle",
+        "src": "https://cms-asset.elsanow.io/uploads/Nestle_PNG_Free_File_Download_29e8002b7c.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Permata_Bank_WHITE_Logo_a0ed5d72c8.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Pertamina",
+        "src": "https://cms-asset.elsanow.io/uploads/Pertamina_logo_white_Di3_YB_2_Jb_03e19b9cee.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Globa_Logo_Isolation_Color_transparent_dd7e9e2342.gif",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "TELUS",
+        "src": "https://cms-asset.elsanow.io/uploads/telus_digital_new_logo_82a93e00eb.webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/ykk_ap_logo_530x600_a36cf38f90.webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Linguatec",
+        "src": "https://cms-asset.elsanow.io/uploads/Logo_Linguatec_sin_fondo_fb3a8ff930.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/unnamed_1_7f6bb30967.jpg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "PLN",
+        "src": "https://cms-asset.elsanow.io/uploads/Logo_PLN_svg_2_91c8bd7b5f.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/Screenshot_2026_05_21_at_8_56_22_AM_fddeeb814a.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Nestle",
+        "src": "https://cms-asset.elsanow.io/uploads/Nestle_PNG_Free_File_Download_29e8002b7c.png",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "App Store",
+        "src": "https://elsaspeak.com/_astro/AppStore.DH1m4Q6V.png",
+        "w": 36,
+        "h": 36
+      },
+      {
+        "alt": "Google Play",
+        "src": "https://elsaspeak.com/_astro/ChPlay.BQmnNk4l.png",
+        "w": 36,
+        "h": 36
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "ChPlay",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FChPlay.BQmnNk4l.png&w=36&h=36&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "App Store",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FAppStore.DH1m4Q6V.png&w=36&h=36&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "ChPlay",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FChPlay.BQmnNk4l.png&w=36&h=36&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "star",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FStar.BQMbRtYL.svg&w=19&h=19&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "App Store",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FAppStore.DH1m4Q6V.png&w=36&h=36&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/1_1606333769.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/2_678c33c91f.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://cms-asset.elsanow.io/uploads/3_bb274db3a3.svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Elsa Speak Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2Felsa-logo-black.DuS0p3NA.svg&w=145&h=50&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Instagram Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FInstagramIcon.D0Q-untT.svg&w=32&h=32&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Youtube Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FYoutubeIcon.CudSs5dX.svg&w=32&h=32&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "TikTok Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2Ftiktok.f7au3JZr.svg&w=32&h=32&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Facebook Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FFacebookIcon.M_jYJA8r.svg&w=32&h=32&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Product Hunt",
+        "src": "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=364950&theme=neutral",
+        "w": 250,
+        "h": 54
+      },
+      {
+        "alt": "Instagram Logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FRectangleMobile.H63w7NQz.svg&w=56&h=56&f=svg",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Download ELSA QR Code",
+        "src": "https://elsaspeak.com/images/elsa-download-qr.png",
+        "w": 1126,
+        "h": 1126
+      },
+      {
+        "alt": "App Store",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FAppStoreMobile.CjTAs_W6.png&w=324&h=110&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Google Store",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FGoogleStoreMobile.KKcU56TL.png&w=324&h=110&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "FingerPrint logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FFingerPrint.CLGI5Q0C.png&w=72&h=72&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "DCMA logo",
+        "src": "https://elsaspeak.com/_image?href=%2F_astro%2FDCMA.D6e_2HMS.png&w=308&h=56&f=webp",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "cookie",
+        "src": "https://d1t11jpd823i7r.cloudfront.net/homepage/cookie.svg",
+        "w": 80,
+        "h": 80
+      },
+      {
+        "alt": "cookie",
+        "src": "https://d1t11jpd823i7r.cloudfront.net/homepage/cookie.svg",
+        "w": 80,
+        "h": 80
+      }
+    ]
+  },
+  {
+    "url": "https://www.loora.com/",
+    "images": [
+      {
+        "alt": "Loora Logo",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Floora-logo.svg&w=256&q=75",
+        "w": 130,
+        "h": 45
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fhero_img_02.webp&w=384&q=75",
+        "w": 384,
+        "h": 416
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fhero_img_01.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fhero_img_03.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fhero_img_04.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_01.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_02a.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_02b.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Practice pronunciation",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_02_device.webp&w=640&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_03a.webp&w=828&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Practice speaking English",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_03b.webp&w=3840&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_04f.webp&w=828&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_04e.webp&w=256&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_04d.webp&w=828&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_04c.webp&w=256&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_04b.webp&w=828&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Fexp_img_04a.webp&w=256&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Learning with Loora",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Ficon-app-loora.webp&w=256&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Learning with a teacher",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Ficon-teacher.webp&w=256&q=75",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "alt": "Loora Logo",
+        "src": "https://www.loora.com/_next/image?url=%2Flegacy%2Floora-logo-dark.svg&w=256&q=75",
+        "w": 0,
+        "h": 0
+      }
+    ]
+  }
+]

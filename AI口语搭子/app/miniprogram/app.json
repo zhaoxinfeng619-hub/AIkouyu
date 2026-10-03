@@ -1,0 +1,14 @@
+{
+  "pages": ["pages/practice/practice", "pages/settings/settings"],
+  "window": {
+    "navigationBarTitleText": "AI口语搭子",
+    "navigationBarBackgroundColor": "#f5f8f7",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f8f7"
+  },
+  "permission": {
+    "scope.record": {"desc": "用于实时英语对话，仅在开始练习后使用麦克风"}
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

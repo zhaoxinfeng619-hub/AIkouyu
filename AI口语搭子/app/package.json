@@ -1,0 +1,24 @@
+{
+  "name": "ai-speaking-buddy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "AI口语搭子：千问实时语音中转与微信小程序",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "prestart": "node scripts/sync-catalog.mjs && node scripts/sync-voice-orb.mjs",
+    "predev": "node scripts/sync-catalog.mjs && node scripts/sync-voice-orb.mjs",
+    "sync:orb": "node scripts/sync-voice-orb.mjs",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "dev": "node --env-file-if-exists=.env --watch server/index.mjs",
+    "test": "node --test test/*.test.mjs miniprogram/tests/*.test.js",
+    "test:server": "node --test test/*.test.mjs",
+    "test:mini": "node --test miniprogram/tests/*.test.js",
+    "sync:catalog": "node scripts/sync-catalog.mjs"
+  },
+  "dependencies": {
+    "ws": "8.22.0"
+  }
+}

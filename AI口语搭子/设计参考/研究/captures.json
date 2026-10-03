@@ -1,0 +1,107 @@
+[
+  {
+    "id": "praktika-scene",
+    "url": "https://praktika.ai/assets/step-5--dq0P3QK.webp",
+    "size": {
+      "w": 1108,
+      "h": 1456
+    },
+    "clip": {
+      "x": 203,
+      "y": 8,
+      "width": 702,
+      "height": 1439
+    },
+    "status": "ok"
+  },
+  {
+    "id": "praktika-feedback",
+    "url": "https://praktika.ai/assets/step-4-CFiY2bfP.webp",
+    "size": {
+      "w": 1108,
+      "h": 1497
+    },
+    "clip": {
+      "x": 203,
+      "y": 8,
+      "width": 702,
+      "height": 1440
+    },
+    "status": "ok"
+  },
+  {
+    "id": "elsa-scenes",
+    "url": "https://i0.wp.com/blog.elsaspeak.com/wp-content/uploads/2026/01/Untitled-design-3.png?resize=261%2C536&ssl=1",
+    "size": {
+      "w": 261,
+      "h": 536
+    },
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 261,
+      "height": 536
+    },
+    "status": "ok"
+  },
+  {
+    "id": "elsa-feedback",
+    "url": "https://cms-asset.elsanow.io/uploads/2_Instant_Feedback_14a6a4e6ee.png",
+    "size": {
+      "w": 528,
+      "h": 1088
+    },
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 528,
+      "height": 1088
+    },
+    "status": "ok"
+  },
+  {
+    "id": "elsa-progress",
+    "url": "https://cms-asset.elsanow.io/uploads/3_Progress_Tracking_f7022f734a.png",
+    "size": {
+      "w": 528,
+      "h": 1088
+    },
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 528,
+      "height": 1088
+    },
+    "status": "ok"
+  },
+  {
+    "id": "duolingo-flow",
+    "url": "https://lh7-rt.googleusercontent.com/docsz/AD_4nXdPEYlrYdw9VGoQwtAYd4OEAwXR_E0GMYHSudBOCd1yGeiWn5WLCLJkLG690f8UyW7dJ61e_57PsnsaTxkp5FW8tXUTiaPCWL_mOdC5648uUERVptV6TTmkrDkDKNTUHu-D0GVLeq5_mUZKQ1MEEEasnEE?key=Z_VR1JadUlFxk0wY-HuZ8Q",
+    "size": {
+      "w": 1400,
+      "h": 800
+    },
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1400,
+      "height": 800
+    },
+    "status": "ok"
+  },
+  {
+    "id": "gemini-live",
+    "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blogpost_Header_Option_2_v02.width-1300.png",
+    "size": {
+      "w": 1300,
+      "h": 733
+    },
+    "clip": {
+      "x": 0,
+      "y": 0,
+      "width": 1300,
+      "height": 733
+    },
+    "status": "ok"
+  }
+]

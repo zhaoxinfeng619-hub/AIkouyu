@@ -1,0 +1,75 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI口语搭子 · 实时对话实现方案</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f7f8fa;color:#253143;font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:1040px;margin:auto;padding:48px 28px 80px}h1{font-size:36px;line-height:1.3;letter-spacing:-1px}h2{font-size:24px;margin-top:48px}h3{font-size:18px}a{color:#285aad}small,.muted{color:#657084}.lead{font-size:21px}.card{padding:24px;border:1px solid #dbe1e9;border-radius:16px;background:white;margin:22px 0}.decision{background:#eaf1ff;border-color:#bfcee6}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:14px;border-bottom:1px solid #dbe1e9;vertical-align:top}th{background:#edf1f6}code,pre{font-family:ui-monospace,SFMono-Regular,monospace}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef1f5;padding:20px;border-radius:12px;font-size:14px}li{margin:8px 0}.flow{display:flex;gap:12px;align-items:center;justify-content:center}.flow>div{flex:1;background:#edf2fa;border-radius:12px;padding:20px;text-align:center}.flow small{display:block}label{display:inline-block;margin:8px 20px 8px 0}input{width:80px;padding:7px;border:1px solid #adb7c5;border-radius:6px;font:inherit}.scroll{overflow-x:auto}summary{cursor:pointer;font-weight:600}#calcResult{font-size:20px;font-weight:650;color:#285aad}@media(max-width:620px){main{padding:24px 18px}h1{font-size:29px}.flow{flex-direction:column}.flow>div{width:100%}.card{padding:18px}th,td{padding:10px;min-width:100px}}@media print{body{background:white}.card{break-inside:avoid}main{padding:0}}
+</style></head><body><main>
+<small>个人自用验证方案 · v0.2 · 2026-10-01</small>
+<h1>AI口语搭子</h1><p class="lead">真正实时对话，先把你自己陪练好。</p>
+<p>已确认：名字为“AI口语搭子”；服务有基础但不敢开口的成年人；直接做实时语音；前期主要自己使用，调好后再发布。本版重新编写，未调用产品设计 skill，也未沿用上一版一问一答方案。</p>
+<div class="card decision"><strong>推荐决策：</strong>首选测试“原生实时语音模型 + 自有轻量后端 + 微信小程序”。候选模型为北京地域 <code>qwen3.8-omni-flash-realtime</code>。一个 Agent 的角色、教学规则与会话状态可以由我们自己的代码管理，扣子不是前置条件。若需要可视化配置和现成 SDK，备选扣子在线版 WebSocket；当前不投入本地部署扣子。</div>
+
+<h2>1. 三种实现方式怎么选</h2><div class="scroll"><table><thead><tr><th>方式</th><th>适合什么情况</th><th>代价与判断</th></tr></thead><tbody>
+<tr><td><strong>模型 API + 轻量后端</strong></td><td>由代码管理提示词、实时会话、字幕、学习记录和用量</td><td>按量试用，控制直接；需要自己接音频采集、播放与打断。作为本项目首选技术验证。</td></tr>
+<tr><td><strong>扣子在线版 + WebSocket</strong></td><td>希望在网页后台编辑 Agent、提示词、变量，并使用官方语音 SDK</td><td>确有双向音频与打断；语音识别、合成、文字模型和套餐共同影响费用。保留为备选。</td></tr>
+<tr><td><strong>本地 Coze Studio</strong></td><td>确实需要自托管 Agent 平台和工作流基础设施</td><td>自托管的是编排平台，不等于本地运行语音模型。未核实云端实时语音服务可等价自部署；现阶段收益不足以覆盖维护工作。</td></tr>
+</tbody></table></div>
+<p>扣子云端官方确认 WebSocket 和 RTC 均支持双向流式语音、语音打断和字幕；WebSocket 不额外收 RTC 通话费。开源 Coze Studio 的功能不能直接等同云端扣子，Coze Loop 则主要用于提示词、评测和观测。依据：<a href="https://docs.coze.cn/dev_how_to_guides_realtime_access">扣子接入对比</a>、<a href="https://github.com/coze-dev/coze-studio">Coze Studio</a>、<a href="https://github.com/coze-dev/coze-loop">Coze Loop</a>。</p>
+
+<h2>2. Agent 和实时语音如何连接</h2>
+<div class="flow"><div><strong>微信小程序</strong><small>持续收音、流式播放、字幕、打断</small></div><span>⇄</span><div><strong>我们的后端</strong><small>提示词、会话状态、连接、额度和用量</small></div><span>⇄</span><div><strong>实时语音模型</strong><small>直接接收音频、输出音频与文字</small></div></div>
+<p>实时会话建立后持续传送音频，不需要用户每句话点击发送，也不需要每一轮重新运行一条长工作流。实时模型支持通过 <code>session.update</code> 的 <code>instructions</code> 设置角色与行为。它可以成为“口语搭子”的核心推理能力；应用代码提供另外的控制层。依据：<a href="https://help.aliyun.com/zh/model-studio/realtime">实时模型接入</a>、<a href="https://help.aliyun.com/zh/model-studio/client-events">会话配置与事件</a>。</p>
+<ol>
+<li>点击“开始对话”，客户端向自己的后端申请会话；后端检查登录、并发与预算，创建云端 WebSocket 连接。</li>
+<li>后端填入系统提示词、场景、学习偏好和有限的学习记忆，配置英语音色、音频格式与说话结束检测；确认配置成功后开始收音。</li>
+<li>小程序将录音帧持续发给后端，再转给模型；模型判断用户说完后，流式返回文字和声音。客户端连续播放，而不是等完整音频文件。</li>
+<li>用户在 AI 讲话时开口：立即停止本地声音、清空播放队列、通知模型取消回答、丢弃旧回复的迟到音频。只停本地播放器是不够的。</li>
+<li>每轮记录云端返回的实际用量和延迟；挂断时关闭录音、播放和双方连接，清理异常遗留会话。</li>
+<li>结束后单独进行简短的文字总结，保存一个值得复练的表达。总结和统计不插入实时语音的关键路径。</li>
+</ol>
+<p>打断后还要验证模型如何处理用户未听到的后半段内容。当前查阅的 Qwen 客户端文档没有确认 <code>conversation.item.truncate</code>；不能直接照搬其他厂商事件。必要时通过重建会话并带入已确认的对话摘要恢复一致性，需实测后定案。</p>
+
+<h2>3. 提示词约束与程序约束分开做</h2>
+<div class="scroll"><table><thead><tr><th>提示词负责行为引导</th><th>程序负责明确执行</th></tr></thead><tbody>
+<tr><td>简单英语、稍慢语速、通常每次1—2句、一次问一个问题</td><td>音频格式、播放队列、取消生成、超时、连接恢复</td></tr>
+<tr><td>先回应意思；只改一个点；需要时简短中文帮助；给用户主动提问机会</td><td>密钥保管、模型白名单、单用户并发、会话时长与预算阈值</td></tr>
+<tr><td>没听清时确认；区分语法错误与更自然的表达；不捏造精确发音分数</td><td>实际usage记录、保存/删除学习记录、结构化总结校验</td></tr>
+</tbody></table></div>
+<p>起始配置建议：单用户同时一通；每次建议10分钟；长期空闲自动结束；预算先设每日3元、每月50元作为<strong>测试阈值建议</strong>，不是报价、扣款授权或可保证绝不超出的账单上限。已生成但未收到用量的内容可能继续产生结算，应保留余量并核对账单。</p>
+<p>说话结束检测先测试 <code>semantic_vad</code>，将停顿阈值在1.2—1.8秒附近调试，照顾学习者组织语言的停顿。这个取值是待验证的初值。代码同时保留显式停止/挂断。<code>max_tokens</code> 的官方语义是截断返回，不影响生成过程，不能把它当作费用硬上限。</p>
+<details><summary>提示词草稿的核心内容</summary><pre>你是AI口语搭子，帮助有基础但不敢开口的成年人练口语。
+默认用简单自然的英语，每次通常1至2句、10至30个英文词。
+一次最多问一个问题，留出用户表达和主动提问的空间。
+先回应意思，再按用户选择给一个改进建议。
+用户卡住时给提示；听不懂时用一句中文解释，再回到英语练习。
+没听清就确认，不编造转写、发音分数或学习进步。
+用户结束练习后，口头简短收尾，详细复盘由应用单独生成。</pre><p><a href="./口语搭子系统提示词.txt">查看可继续修改的完整提示词文件</a>。该文件是设计草稿，尚未通过真实模型对话检验。</p></details>
+
+<h2>4. 微信小程序先做音频验证</h2>
+<p>微信官方类型定义已有 PCM 录音、分帧回调、WebAudio 音频缓冲与定时播放能力，因此可以验证“录音帧 → 后端 WebSocket → 实时模型 → PCM 播放队列”。<code>frameSize</code> 单位是 KB；<code>InnerAudioContext</code> 不能直接当成连续 PCM 播放器。<strong>接口存在不代表同录同播、外放回声和自然打断已经可靠。</strong>依据：<a href="https://github.com/wechat-miniprogram/api-typings/blob/master/types/wx/lib.wx.api.d.ts">微信官方 API 类型定义</a>。</p>
+<p>第一项开发产物应是一页真机音频验证界面：开始、挂断、字幕、费用记录。先测耳机，再测外放，并检查录音十分钟边界、切后台、电话中断和蓝牙切换。用真实观测确定第一声延迟与打断效果。</p>
+<p>TRTC 另一条路线涉及企业主体、指定类目及 live-pusher/live-player 权限，个人自用不会自动豁免。它不等于普通录音 API 的限制。若没有可用 AppID 或小程序音频仍不稳定，可先用 H5 临时验证模型，最终平台仍保留为微信小程序。H5 成功不能替代小程序验收。依据：<a href="https://cloud.tencent.com/document/product/647/116548">TRTC 小程序接入条件</a>。</p>
+
+<h2>5. 直连实时模型的费用</h2>
+<p>本次2026-10-01访问到的 <code>qwen3.8-omni-flash-realtime</code> 北京原价：每百万 token，音频输入6元、音频输出12元、文本输入1.5元、文本输出4.5元。输出语音与对应文字分别计费。依据：<a href="https://help.aliyun.com/zh/model-studio/qwen3-8-omni-flash-realtime">官方模型定价</a>。</p>
+<p>一场10分钟练习，假设用户说4分钟、AI说3分钟。只计算新增音频会得到约0.037元，但<strong>这不是整场费用</strong>：多轮会重复计入历史音频和文字，系统提示词也参与输入。下表改用整场累计计费的用量做敏感性计算，避免漏算历史。</p>
+<div class="scroll"><table><thead><tr><th>用量情景</th><th>累计音频输入</th><th>每次纯模型费</th><th>30次</th></tr></thead><tbody>
+<tr><td>A</td><td>10,000 token</td><td>0.11175元</td><td>3.35元</td></tr>
+<tr><td>B</td><td>30,000 token</td><td>0.23175元</td><td>6.95元</td></tr>
+<tr><td>C</td><td>60,000 token</td><td>0.41175元</td><td>12.35元</td></tr>
+</tbody></table></div>
+<p>三种情景共同假设：累计音频输出2,250 token、文字输入12,000 token、文字输出预算1,500 token。<strong>它们不是实际预测、报价或上限。</strong>不含额外转写、课后总结、服务器、流量和其他服务；可选输入转写是否独立收费，本次文档未明确，需要核账。未扣除试用额度。</p>
+<div class="card"><strong>调整使用频率</strong><br><label>每天练习 <input type="number" id="daily" value="1" min="0" max="20" step="1"> 次</label><label>每月使用 <input type="number" id="days" value="30" min="1" max="31" step="1"> 天</label><p id="calcResult"></p><small>按上表A—C的用量假设线性计算，不代表你的真实费用区间。</small></div>
+<p>后端累计各次 <code>response.done</code> 的四类 token 明细：<br><code>费用 = (音频输入×6 + 音频输出×12 + 文字输入×1.5 + 文字输出×4.5) ÷ 1,000,000</code>。不要另加 total_tokens，避免重复计算。依据：<a href="https://help.aliyun.com/zh/model-studio/server-events">实际usage字段</a>。</p>
+
+<h2>6. 如果用扣子，选在线版 WebSocket</h2>
+<p>实际步骤：在扣子创建陪练 Agent → 配置提示词和变量 → 发布为 API → 后端管理调用凭证 → 通过 <code>wss://ws.coze.cn/v1/chat?bot_id=…</code> 建立双向音频会话 → 在 <code>chat.update</code> 中传 level、scene 等变量并配置语音检测。</p>
+<p>自由对话需显式设置 <code>server_vad</code>，不要沿用默认按键模式；停顿阈值需要调试。文档中的语义判停和部分高级降噪属于企业旗舰能力，个人方案不能默认拥有。官方提供 UniApp SDK 和微信小程序示例，但仍需真机验证。依据：<a href="https://docs.coze.cn/developer_guides_streaming_chat_event">扣子会话事件</a>、<a href="https://docs.coze.cn/developer_guides_streaming_chat_api">双向对话接口</a>、<a href="https://github.com/coze-dev/coze-js/blob/main/packages/coze-uniapp/README.md">官方UniApp SDK</a>。</p>
+<p>按大模型流式识别75积分/分钟、TTS 2.0系统音色0.3积分/字符测算，10分钟练习、识别计量4—10分钟、输出2,000英文字符，会消耗约<strong>900—1,350积分/次，再加文字模型</strong>。识别服务不会只按净说话时间计量；打断时已合成内容也可能收费。30次音频为2.7—4.05万积分。现金价等值约0.9—1.35元/次，不代表个人账户可以直接按次付现金。依据：<a href="https://docs.coze.cn/coze_pro_asr_tts_fee">扣子音视频计费</a>。</p>
+<p>本次查到的个人进阶版刊例为39.9元/月、3万积分，高阶版99元/月、9.9万积分；实际购买、可用积分和权益以账户页面为准。套餐支出不能再机械叠加一遍已由所含积分抵扣的消耗。依据：<a href="https://docs.coze.cn/guides_edition">扣子套餐</a>、<a href="https://docs.coze.cn/coze_pro_credits">积分规则</a>。</p>
+
+<h2>7. 先验证什么，再做产品</h2><ol>
+<li><strong>真机音频：</strong>持续收音、连续播放、打断、挂断后停止计费连接。小程序探针优先于完整页面开发。</li>
+<li><strong>对话质量：</strong>你说得慢时会不会抢话、英文是否适合你、中文求助后能否回到练习、纠错是否准确且适量。</li>
+<li><strong>真实费用：</strong>完成几场10分钟练习，对比usage与云账单，记录转写、总结和失败重试的额外消耗。</li>
+<li><strong>学习体验：</strong>再接入保存表达、练后复盘和少量学习记忆；你持续用起来以后，再考虑发布、多人账户和收费。</li>
+</ol>
+<p class="muted">本次完成的是官方资料核验、实现方案和提示词草稿。没有安装扣子、调用付费API或验证真实手机通话。模型接入权限、英音质量和账单仍需实际账户与设备验证。</p>
+</main><script>(()=>{const d=document.getElementById('daily'),m=document.getElementById('days'),o=document.getElementById('calcResult');function update(){const n=Math.max(0,Math.min(20,Number(d.value)||0))*Math.max(1,Math.min(31,Number(m.value)||1));o.textContent='情景A—C：每月模型费用 '+(n*.11175).toFixed(2)+' — '+(n*.41175).toFixed(2)+' 元'}d.addEventListener('input',update);m.addEventListener('input',update);update()})();</script></body></html>

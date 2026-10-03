@@ -1,0 +1,10 @@
+import {chromium} from '/Users/gaowenjie/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+import {fileURLToPath} from 'node:url';
+const b=await chromium.launch({headless:true,channel:'chrome'});const p=await b.newPage({viewport:{width:1500,height:1800},deviceScaleFactor:1});
+const errors=[];p.on('pageerror',e=>errors.push(e.message));
+await p.goto('http://127.0.0.1:8790/App设计截图参考.html',{waitUntil:'networkidle'});await p.locator('.shot img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
+const images=await p.locator('.shot img').evaluateAll(imgs=>imgs.map(i=>({src:i.getAttribute('src'),w:i.naturalWidth,h:i.naturalHeight})));if(images.length!==11||images.some(i=>!i.w))throw Error('Image missing');
+for(const [id,name] of [['voice','语音对话参考'],['entry','首页场景参考'],['review','纠错复盘参考']])await p.locator('#'+id).screenshot({path:fileURLToPath(new URL('../'+name+'.png',import.meta.url))});
+await p.locator('[data-open="05"]').click();await p.locator('dialog[open]').waitFor();if(!await p.locator('#dialogtitle').innerText().then(t=>t.includes('Praktika')))throw Error('Viewer mismatch');await p.keyboard.press('Escape');
+await p.setViewportSize({width:390,height:844});const overflow=await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Mobile overflow');await p.screenshot({path:fileURLToPath(new URL('./board-mobile.png',import.meta.url))});
+console.log(JSON.stringify({images:images.length,viewer:'passed',mobileOverflow:overflow,errors},null,2));await b.close();

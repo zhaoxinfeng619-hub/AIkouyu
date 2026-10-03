@@ -1,0 +1,19 @@
+
+/.pm-workflow/
+/scripts/pm-runtime-config.js
+/scripts/.venv/
+/.handoff/
+
+# Local dependencies, credentials and generated artifacts
+node_modules/
+.npm-cache/
+.env
+.env.*
+!.env.example
+.local/
+.DS_Store
+test-results/
+project.private.config.json
+/dist/
+*.pem
+*.key

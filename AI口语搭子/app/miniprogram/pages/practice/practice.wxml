@@ -1,0 +1,55 @@
+<view class="practice-page {{screen === 'call' ? 'is-call mode-' + visualMode : ''}}">
+  <view class="home-screen" wx:if="{{screen === 'home'}}">
+    <view class="home-top"><view class="brand">AI口语搭子<view class="brand-dot"></view></view><button class="profile-button" bindtap="openSettings" aria-label="打开设置"><view class="profile-head"></view><view class="profile-body"></view></button></view>
+    <view class="home-tabs"><button class="home-tab {{homeTab === 'scenes' ? 'is-selected' : ''}}" data-id="scenes" bindtap="chooseHomeTab">场景</button><button class="home-tab {{homeTab === 'orb' ? 'is-selected' : ''}}" data-id="orb" bindtap="chooseHomeTab">极简语音</button></view>
+    <view wx:if="{{homeTab === 'scenes'}}">
+      <view class="home-heading">把英语，聊进生活里。</view><view class="home-subheading">选个小场景，和搭子聊两句。</view>
+      <view class="scene-grid">
+        <button class="scene-card scene-{{item.id}}" wx:for="{{scenes}}" wx:key="id" data-id="{{item.id}}" bindtap="chooseScene">
+          <view class="scene-art"><view class="atlas-cell"><image class="atlas-image" src="{{item.image}}" style="left:{{-item.spriteX * 2}}%;top:{{-item.spriteY}}%;" mode="scaleToFill"></image></view></view>
+          <view class="scene-card-shade"></view><view class="scene-tag">{{item.tag}}</view><view class="scene-card-copy"><view class="scene-title">{{item.title}}</view><view class="scene-english">{{item.english}}</view></view><view class="circle-arrow">↗</view>
+        </button>
+      </view>
+    </view>
+    <view class="free-panel" wx:else>
+      <view class="home-heading">极简一点，专心开口。</view><view class="home-subheading">从日常聊天开始，留点空白，专心说几句。</view>
+      <button class="free-card" bindtap="openOrbChat"><view class="free-art free-orb-art"><view class="orb-fallback"></view></view><view class="free-copy"><view class="free-title">日常聊天 · 极简语音</view><view class="free-description">保留实时语音和字幕，让界面更安静。</view><view class="free-cta">开始日常聊天 <text>↗</text></view></view></button>
+      <view class="free-note">通话中，也可以随时切换到场景界面。</view>
+    </view>
+    <button class="service-link" bindtap="openSettings"><view class="status-dot {{healthOk ? 'connected' : ''}}"></view><text>{{healthLabel}}</text><text wx:if="{{showSetup}}"> · 配置后即可真实通话</text><text class="service-arrow">›</text></button>
+  </view>
+
+  <view class="detail-screen" wx:if="{{screen === 'detail'}}">
+    <view class="page-top"><button class="back-button" bindtap="goBack" aria-label="返回练习首页">‹</button><text class="top-title">{{selectedScene.title}}</text><text class="top-tag">{{selectedScene.tag}}</text></view>
+    <view class="detail-hero scene-{{scene}}"><view class="atlas-cell"><image class="atlas-image" src="{{selectedScene.image}}" style="left:{{-selectedScene.spriteX * 2}}%;top:{{-selectedScene.spriteY}}%;" mode="scaleToFill"></image></view><view class="hero-label">{{selectedScene.english}}</view></view>
+    <view class="detail-heading">{{selectedScene.title}}</view><view class="detail-description">{{selectedScene.description}}</view>
+    <view class="partner-row"><view class="partner-avatar">{{selectedScene.initial}}</view><view><view class="partner-name">{{selectedScene.partner}}</view><view class="partner-role">{{selectedScene.characterMeta}}</view></view><view class="partner-badge">AI 陪练</view></view>
+    <view class="character-profile" wx:if="{{selectedScene.character}}">
+      <view class="character-profile-heading">认识 {{selectedScene.partner}}<text>人物档案</text></view>
+      <view class="character-tags"><text wx:for="{{selectedScene.character.personality.tags}}" wx:key="*this">{{item}}</text></view>
+      <view class="character-bio">{{selectedScene.character.bio}}</view>
+      <view class="character-facts"><view><text class="character-fact-label">喜欢</text><text>{{selectedScene.characterInterests}}</text></view><view><text class="character-fact-label">声音</text><text>{{selectedScene.character.speakingStyle.label}}</text></view></view>
+    </view>
+    <view class="task-panel"><view class="block-title">这次可以试着聊</view><view class="task-row" wx:for="{{selectedScene.tasks}}" wx:key="*this"><view class="task-number">{{index + 1}}</view><text>{{item}}</text></view><view class="task-note">是聊天提示，不是考试。按自己的节奏来。</view></view>
+    <view class="preferences"><view class="preference"><text>英语难度</text><view class="segments"><button class="segment {{level === 'starter' ? 'chosen' : ''}}" data-id="starter" bindtap="chooseLevel">慢慢来</button><button class="segment {{level === 'basic' ? 'chosen' : ''}}" data-id="basic" bindtap="chooseLevel">有点基础</button></view></view><view class="preference"><text>表达建议</text><view class="segments"><button class="segment {{correction === 'gentle' ? 'chosen' : ''}}" data-id="gentle" bindtap="chooseCorrection">轻提醒</button><button class="segment {{correction === 'after_session' ? 'chosen' : ''}}" data-id="after_session" bindtap="chooseCorrection">先尽情聊</button></view></view></view>
+    <button class="start-button" bindtap="startSession" disabled="{{starting || ending}}" loading="{{starting || ending}}">{{ending ? '正在结束上一通对话' : '开始对话'}} <text>↗</text></button>
+    <view class="detail-bottom"><text>每次最多 10 分钟 · 建议戴耳机</text><button bindtap="previewOrb">先预览界面</button></view>
+    <button wx:if="{{showSetup}}" class="setup-note" bindtap="openSettings">服务尚未配置，先看看场景和界面也可以。<text>去设置 ›</text></button>
+  </view>
+
+  <view class="call-screen" hidden="{{screen !== 'call'}}">
+    <view class="page-top call-top"><button class="back-button" bindtap="goBack" aria-label="返回场景详情并结束通话">‹</button><view class="call-heading"><view>{{selectedScene.title}}</view><view class="call-timer">{{previewing ? '仅视觉预览' : elapsed}}</view></view><button class="mode-toggle" bindtap="toggleVisualMode">{{visualMode === 'scene' ? '◌ 极简' : '▧ 场景'}}</button></view>
+    <view class="scene-stage scene-{{scene}} {{reducedMotion ? 'reduced-motion' : ''}} state-{{previewing ? previewPhase : muted && state !== 'speaking' ? 'muted' : state}}" hidden="{{visualMode !== 'scene'}}"><view class="scene-portrait"><view class="atlas-cell"><image class="atlas-image" src="{{selectedScene.image}}" style="left:{{-selectedScene.spriteX * 2}}%;top:{{-selectedScene.spriteY}}%;" mode="scaleToFill"></image></view></view><view class="scene-stage-shade"></view><view class="scene-partner"><view class="scene-partner-name">{{selectedScene.partner}}</view><view class="scene-partner-role">{{selectedScene.role}} · AI 搭子</view></view><view class="voice-indicator"><view></view><view></view><view></view><view></view><view></view></view></view>
+    <view class="orb-stage" hidden="{{visualMode !== 'orb'}}"><view class="voice-orb-wrap"><view class="orb-fallback" wx:if="{{!orbReady}}"></view><canvas id="voice-orb" class="voice-orb {{orbReady ? 'ready' : ''}}" type="webgl" binderror="orbFallback"></canvas></view><view class="orb-partner">{{selectedScene.partner}} · {{selectedScene.role}}</view></view>
+    <view class="state-title">{{previewing ? previewLabel + '状态预览' : muted && state !== 'speaking' ? '麦克风已静音' : stateTitle}}</view><view class="state-hint">{{previewing ? '未开启麦克风，也不会产生模型费用' : muted && state !== 'speaking' ? selectedScene.partner + ' 听不到你，准备好后取消静音。' : stateHint}}</view>
+    <view class="message error" wx:if="{{error}}"><view>{{error}}</view><view class="error-links"><button bindtap="openPermissions">麦克风权限</button><button bindtap="openSettings" disabled="{{active || starting}}">连接设置</button></view></view><view class="message notice" wx:if="{{notice}}">{{notice}}</view>
+    <view class="call-tools"><button class="mini-tool {{showSubtitles ? 'tool-selected' : ''}}" bindtap="toggleSubtitles">CC {{showSubtitles ? '收起字幕' : '显示字幕'}}</button><button class="mini-tool" bindtap="toggleMotion">{{reducedMotion ? '恢复动效' : '减少动效'}}</button><button class="mini-tool" wx:if="{{!active && !starting && !ending}}" bindtap="previewOrb">{{previewing ? '结束预览' : '预览界面'}}</button></view>
+    <view class="subtitles" wx:if="{{showSubtitles}}"><view class="subtitle-heading">与 {{selectedScene.partner}} 的对话<text>{{active ? '实时显示' : '只显示实际对话'}}</text></view><scroll-view class="transcript-list" scroll-y scroll-with-animation scroll-into-view="{{scrollTarget}}" wx:if="{{transcript.length}}"><view class="subtitle {{item.role}}" wx:for="{{transcript}}" wx:key="id" id="subtitle-{{index}}"><view class="speaker">{{item.speakerName}}</view><text user-select="true">{{item.text || '…'}}</text></view></scroll-view><view class="empty-transcript" wx:else>开始真实通话后，对话会出现在这里。</view></view>
+    <view class="call-actions" wx:if="{{active}}"><button class="call-tool {{muted ? 'muted-tool' : ''}}" bindtap="toggleMute"><view class="tool-symbol">{{muted ? '◌' : '●'}}</view>{{muted ? '取消静音' : '静音'}}</button><button class="hangup" bindtap="hangup"><view class="hangup-symbol">⌁</view>结束</button><button class="call-tool" bindtap="interrupt"><view class="tool-symbol">Ⅱ</view>我来说</button></view>
+    <button wx:else class="start-button call-start" bindtap="startSession" disabled="{{starting || ending}}" loading="{{starting || ending}}">{{starting ? '正在连接 ' + selectedScene.partner : ending ? '正在结束' : sessionComplete ? '再聊一会儿' : '开始真实对话'}} <text wx:if="{{!starting && !ending}}">↗</text></button>
+    <view class="usage" wx:if="{{active || sessionComplete || usageIncomplete}}">本次估算 ¥{{sessionYuan}}<text>· 今日 ¥{{dailyYuan}} · 本月 ¥{{monthlyYuan}}</text></view><view class="footnote">{{usageIncomplete ? '部分用量未返回，估算可能不完整，以实际账单为准' : '离开页面会自动结束通话'}}</view><view class="orb-static-note" wx:if="{{visualMode === 'orb' && orbFailed}}">当前设备使用静态光球，对话不受影响</view>
+  </view>
+
+  <view class="bottom-nav" wx:if="{{screen === 'home'}}"><button class="nav-item nav-active" bindtap="goHome"><view class="nav-speech">◧</view><text>练习</text></button><button class="nav-item" bindtap="openSettings"><view class="nav-person">○</view><text>设置</text></button></view>
+  <view class="privacy-mask" wx:if="{{showPrivacy}}" catchtouchmove="preventTouchMove"><view class="privacy-dialog"><view class="privacy-title">开始前，了解声音如何使用</view><view class="privacy-copy">练习时，我们会使用麦克风，将你的声音发送到陪练服务和千问，生成对话回应。结束后会停止收音。</view><button class="privacy-contract" bindtap="openPrivacy">查看《隐私保护指引》</button><view class="privacy-actions"><button class="secondary" bindtap="rejectPrivacy">暂不开启</button><button id="agree-privacy" class="primary" open-type="agreePrivacyAuthorization" bindagreeprivacyauthorization="agreePrivacy">同意并继续</button></view></view></view>
+</view>

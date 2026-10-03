@@ -1,0 +1,120 @@
+{
+  "collected": "2026-10-02",
+  "note": "官方公开界面素材或演示截帧，非本人登录实测；不同版本及地区界面可能不同。评语为针对AI口语搭子的设计观察。",
+  "items": [
+    {
+      "id": "01",
+      "app": "ChatGPT Voice",
+      "title": "让语音动效成为主角",
+      "file": "chatgpt-voice-official-demo-3s.png",
+      "group": "voice",
+      "kind": "官方演示截帧 · 3 秒 · 局部",
+      "source": "https://chatgpt.com/features/voice/",
+      "note": "看留白、球体比例和轻量顶部按钮。我们已有的 Fluid Orb 可以沿用这类视觉层级。",
+      "cls": "gpt"
+    },
+    {
+      "id": "02",
+      "app": "Gemini Live",
+      "title": "把通话操作固定在底部",
+      "file": "gemini-live.png",
+      "group": "voice",
+      "kind": "官方宣传图 · 含产品界面",
+      "source": "https://blog.google/products-and-platforms/products/gemini/gemini-live-android-tips/",
+      "note": "看底部控件的间距、圆角和红色结束按钮。适合参考静音、暂停、结束的布局。",
+      "cls": "gemini"
+    },
+    {
+      "id": "03",
+      "app": "Speak",
+      "title": "字幕、翻译、提示分层出现",
+      "file": "speak-conversation.png",
+      "group": "voice",
+      "kind": "官方帮助文档截图 · 日语练习示例",
+      "source": "https://help.speak.com/en/articles/13182402-free-talk-immersive-roleplay",
+      "note": "看当前句、翻译和提示的层级；辅助信息按需展开，让用户卡壳时有办法继续。",
+      "cls": "speakvoice"
+    },
+    {
+      "id": "04",
+      "app": "Duolingo",
+      "title": "从进入练习到接通，状态清晰",
+      "file": "duolingo-flow.png",
+      "group": "voice",
+      "kind": "官方功能介绍 · 三屏组合图",
+      "source": "https://blog.duolingo.com/video-call/",
+      "note": "看入口、呼叫、通话三个状态如何衔接。可借鉴通话流程，主视觉继续用我们选好的球体。",
+      "cls": "duo"
+    },
+    {
+      "id": "05",
+      "app": "Praktika",
+      "title": "首页就能找到想聊的话题",
+      "file": "praktika-scene.png",
+      "group": "entry",
+      "kind": "官网产品展示图 · 保留手机框",
+      "source": "https://praktika.ai/",
+      "note": "分类入口＋快捷场景＋自由聊按钮。推荐优先参考这一张来整理我们的练习首页。"
+    },
+    {
+      "id": "06",
+      "app": "Speak",
+      "title": "双列场景卡片，一眼选主题",
+      "file": "speak-scene.png",
+      "group": "entry",
+      "kind": "官方帮助文档截图",
+      "source": "https://help.speak.com/en/articles/13182402-free-talk-immersive-roleplay",
+      "note": "大卡片讲清场景，完成标签提供进度感；适合咖啡店、旅行、日常聊天等入口。"
+    },
+    {
+      "id": "07",
+      "app": "Speak",
+      "title": "开始前，告诉用户这次练什么",
+      "file": "speak-detail.png",
+      "group": "entry",
+      "kind": "官方帮助文档截图",
+      "source": "https://help.speak.com/en/articles/13182402-free-talk-immersive-roleplay",
+      "note": "把场景说明、练习目标和开始按钮放在一页，减少进入通话前的不确定感。"
+    },
+    {
+      "id": "08",
+      "app": "ELSA Speak",
+      "title": "自由聊与场景练习分成两层",
+      "file": "elsa-scenes.png",
+      "group": "entry",
+      "kind": "官方改版文章截图 · 原图分辨率较低",
+      "source": "https://blog.elsaspeak.com/en/discover-the-new-elsa-speak-experience/",
+      "note": "顶部直接开聊，下方按主题选择；场景卡片上的难度与时长便于快速判断。"
+    },
+    {
+      "id": "09",
+      "app": "Praktika",
+      "title": "把纠错收进可以关闭的抽屉",
+      "file": "praktika-feedback.png",
+      "group": "review",
+      "kind": "官网产品展示图 · 保留手机框",
+      "source": "https://praktika.ai/",
+      "note": "原句、改进说法、简短解释分开。我们可让用户在需要时点开，保持通话节奏。"
+    },
+    {
+      "id": "10",
+      "app": "ELSA Speak",
+      "title": "复盘先给一段读得懂的反馈",
+      "file": "elsa-feedback.png",
+      "group": "review",
+      "kind": "官网公开产品界面图",
+      "source": "https://elsaspeak.com/en",
+      "note": "先总结表现，再按词汇、发音、语法分项。我们的第一版可以只保留一两个改进点。"
+    },
+    {
+      "id": "11",
+      "app": "ELSA Speak",
+      "title": "用趋势呈现多次练习的变化",
+      "file": "elsa-progress.png",
+      "group": "review",
+      "kind": "官网公开产品界面图",
+      "source": "https://elsaspeak.com/en",
+      "note": "看趋势和层级即可；我们的版本先展示开口时长、练习次数等可可靠统计的数据。"
+    }
+  ]
+}

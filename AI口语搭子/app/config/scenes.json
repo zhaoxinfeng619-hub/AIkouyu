@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "scenes": [
+    {
+      "id": "daily",
+      "title": "认识新朋友",
+      "english": "Meet someone new",
+      "description": "从一句自我介绍开始，聊聊彼此的小爱好。",
+      "tasks": [
+        "介绍自己的名字",
+        "聊一个你的爱好",
+        "问问对方喜欢什么"
+      ],
+      "tag": "轻松开口",
+      "duration": "3–5 分钟",
+      "category": "daily",
+      "characterId": "mia",
+      "roleInstruction": "a new friend at a casual neighborhood gathering. Introduce yourself briefly, then help the learner introduce themself, share a hobby, and ask what you enjoy. You may talk about their day. Stay in this friendly first-meeting setting.",
+      "displayOrder": 20
+    },
+    {
+      "id": "coffee",
+      "title": "咖啡店点单",
+      "english": "At a coffee shop",
+      "description": "走进街角咖啡店，为自己点一杯喜欢的饮品。",
+      "tasks": [
+        "点一杯饮品",
+        "选择杯型和冷热",
+        "询问价格"
+      ],
+      "tag": "日常必备",
+      "duration": "3–5 分钟",
+      "category": "daily",
+      "characterId": "alex",
+      "roleInstruction": "a barista at a coffee shop. Help the learner order a drink, choose a size and hot or iced, and ask its price. Stay behind the counter and take the order one step at a time.",
+      "displayOrder": 40
+    },
+    {
+      "id": "restaurant",
+      "title": "街头餐车",
+      "english": "At a food truck",
+      "description": "闻着香味来到餐车前，试试用英语点一份晚餐。",
+      "tasks": [
+        "询问推荐的食物",
+        "选择一份餐点",
+        "确认价格和取餐方式"
+      ],
+      "tag": "美食时间",
+      "duration": "3–5 分钟",
+      "category": "daily",
+      "characterId": "leo",
+      "roleInstruction": "a food truck vendor at a lively street market. Help the learner ask for a recommendation, order one meal, and confirm its price and where to collect it. Offer a small simple menu when needed. Stay in the food-ordering situation.",
+      "displayOrder": 10
+    },
+    {
+      "id": "shopping",
+      "title": "商店购物",
+      "english": "At a clothing store",
+      "description": "找到一件喜欢的衣服，再问问尺码和试衣间。",
+      "tasks": [
+        "描述想买的衣服",
+        "询问颜色和尺码",
+        "提出试穿请求"
+      ],
+      "tag": "逛街时刻",
+      "duration": "3–5 分钟",
+      "category": "daily",
+      "characterId": "emma",
+      "roleInstruction": "a clothing store assistant. Help the learner describe a clothing item they want, ask about colors and sizes, and ask to try it on. Stay in the clothing shop and do not complete the learner’s requests for them.",
+      "displayOrder": 30
+    },
+    {
+      "id": "travel",
+      "title": "旅行问路",
+      "english": "Find your way",
+      "description": "在陌生城市放慢脚步，向热心的路人问个路。",
+      "tasks": [
+        "询问地铁站的位置",
+        "确认方向或路线",
+        "询问步行需要多久"
+      ],
+      "tag": "旅行实用",
+      "duration": "3–5 分钟",
+      "category": "travel",
+      "characterId": "noah",
+      "roleInstruction": "a friendly local in an imagined city. Help the learner ask where the subway station is, confirm the route, and ask how long it takes to walk there. Keep directions short and simple. Stay in this asking-for-directions situation.",
+      "displayOrder": 50
+    },
+    {
+      "id": "hotel",
+      "title": "酒店入住",
+      "english": "Check in at a hotel",
+      "description": "旅途的第一站，从轻松办理入住开始。",
+      "tasks": [
+        "说明有一份预订",
+        "确认房型和入住时间",
+        "询问早餐或退房时间"
+      ],
+      "tag": "出行必备",
+      "duration": "3–5 分钟",
+      "category": "travel",
+      "characterId": "olivia",
+      "roleInstruction": "a hotel receptionist. Help the learner say they have a reservation, confirm the room type and arrival, and ask about breakfast or checkout time. Use made-up booking details and a practice name; do not ask for real identity documents or payment information. Stay at the hotel reception.",
+      "displayOrder": 60
+    }
+  ]
+}

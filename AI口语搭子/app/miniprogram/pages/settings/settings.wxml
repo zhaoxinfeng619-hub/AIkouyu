@@ -1,0 +1,28 @@
+<view class="page settings-page">
+  <view class="eyebrow">LET'S GET CONNECTED</view>
+  <view class="title">准备好你的口语搭子</view>
+  <view class="intro">首次使用时连接陪练服务。保存后，下次就能直接开始。</view>
+  <view class="panel form">
+    <view class="label">服务地址</view>
+    <input class="field" value="{{baseUrl}}" bindinput="changeAddress" placeholder="https://your-domain.com" type="text" maxlength="200" adjust-position />
+    <view class="help">电脑模拟器可用本机地址；手机测试需使用手机可访问的 HTTPS 服务地址。127.0.0.1 在手机上指向手机自身。</view>
+    <view class="label second-label">应用访问口令</view>
+    <view class="password-row"><input class="field token" value="{{accessToken}}" password="{{!reveal}}" bindinput="changeToken" placeholder="填写服务配置中的访问口令" maxlength="256"/><button class="reveal" bindtap="toggleReveal">{{reveal ? '隐藏' : '显示'}}</button></view>
+    <view class="help">这是后端设置的应用口令，用于保护你的服务。不要在这里填写千问 API Key。</view>
+    <view class="actions"><button class="secondary" bindtap="testConnection" loading="{{checking}}" disabled="{{checking}}">测试连接</button><button class="primary" bindtap="save">保存设置</button></view>
+    <view wx:if="{{status}}" class="result {{statusOk ? 'ok' : 'pending'}}">{{status}}</view>
+    <view wx:if="{{model}}" class="model">当前模型：{{model}}</view>
+  </view>
+  <view class="panel instructions">
+    <view class="section-title">第一次连接</view>
+    <view class="step"><view class="number">1</view><view><view class="step-title">启动陪练服务</view><view class="help">按照项目 README 配置百炼账号、密钥与应用访问口令。密钥只放在服务器。</view></view></view>
+    <view class="step"><view class="number">2</view><view><view class="step-title">填写地址，测试连接</view><view class="help">模拟器可用 http://127.0.0.1:8788。手机真机请用已配置的 HTTPS 服务地址，并在小程序后台添加请求与通信合法域名。</view></view></view>
+    <view class="step"><view class="number">3</view><view><view class="step-title">回到首页，戴上耳机</view><view class="help">首次开始时允许麦克风权限。在真机上验证收音、播放与打断体验。</view></view></view>
+  </view>
+  <view class="privacy">通话声音会发送到你配置的陪练服务，再由千问处理。结束或离开页面后停止收音。访问口令保存在本机，可随时清除。</view>
+  <button class="clear" bindtap="clearToken">清除本机访问口令</button>
+  <view class="orb-credit">
+    <text>语音动效 · Fluid Orb by Rare UI</text>
+    <button class="source-link" bindtap="copyOrbSource" aria-label="复制 Rare UI 动效来源链接">rareui.com · 复制链接</button>
+  </view>
+</view>
