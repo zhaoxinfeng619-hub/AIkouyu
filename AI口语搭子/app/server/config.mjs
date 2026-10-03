@@ -28,7 +28,8 @@ export function loadConfig(env = process.env, root = APP_ROOT) {
   if (model !== MODEL) throw new Error('当前费用计算仅支持 qwen3.8-omni-flash-realtime；更换模型前需同步计价');
   const publicOrigin = env.PUBLIC_ORIGIN?.trim().replace(/\/$/, '') || '';
   if (publicOrigin && !/^https?:\/\/[^/]+$/.test(publicOrigin)) throw new Error('PUBLIC_ORIGIN 应为完整域名，例如 https://voice.example.com');
-  const apiKey = env.DASHSCOPE_API_KEY?.trim() || '';
+  // Vercel stores the user's provider credential under the exact name `aliyun`.
+  const apiKey = env.aliyun?.trim() || env.DASHSCOPE_API_KEY?.trim() || '';
   return {
     root, dataDir, accessToken, apiKey, workspaceId, model,
     host: env.HOST || '127.0.0.1',
@@ -42,6 +43,6 @@ export function loadConfig(env = process.env, root = APP_ROOT) {
     inputTranscription: env.ENABLE_INPUT_TRANSCRIPTION !== 'false',
     stopGraceMs: 700,
     upstreamUrl: workspaceId ? `wss://${workspaceId}.cn-beijing.maas.aliyuncs.com/api-ws/v1/realtime?model=${encodeURIComponent(model)}` : '',
-    missing: [!apiKey && 'DASHSCOPE_API_KEY', !workspaceId && 'DASHSCOPE_WORKSPACE_ID'].filter(Boolean),
+    missing: [!apiKey && 'aliyun / DASHSCOPE_API_KEY', !workspaceId && 'DASHSCOPE_WORKSPACE_ID'].filter(Boolean),
   };
 }
